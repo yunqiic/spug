@@ -1,4 +1,7 @@
 ```shell
+sudo docker compose up -d
+sudo docker exec spug init_spug admin 1e01087f
+
 cd spug
 git pull
 cd spug_web

@@ -1,0 +1,115 @@
+sudo docker compose up -d
+[sudo] password for zhangchunsheng:
+[+] Running 27/27
+ ✔ spug 14 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                 135.5s
+   ✔ 2d473b07cdd5 Pull complete                                                                                                                                             7.7s
+   ✔ abdfa85729f1 Pull complete                                                                                                                                             9.6s
+   ✔ 1b0edbdc6234 Pull complete                                                                                                                                             3.6s
+   ✔ 6090ab105fad Pull complete                                                                                                                                             8.8s
+   ✔ 07ad8922d65e Pull complete                                                                                                                                             9.7s
+   ✔ 1ef95b15268d Pull complete                                                                                                                                            11.5s
+   ✔ 690a1aec9cde Pull complete                                                                                                                                            11.4s
+   ✔ 495e5cb0b64d Pull complete                                                                                                                                            11.0s
+   ✔ f8010f839380 Pull complete                                                                                                                                            12.3s
+   ✔ 8fedd1b9288f Pull complete                                                                                                                                            12.7s
+   ✔ d0ab985bb1a0 Pull complete                                                                                                                                            14.4s
+   ✔ c25249905d7f Pull complete                                                                                                                                            13.5s
+   ✔ 8a7886be54ad Pull complete                                                                                                                                            15.5s
+   ✔ 8c6c3185866e Pull complete                                                                                                                                            17.1s
+ ✔ db 11 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                      155.5s
+   ✔ 08c01a0ec47e Pull complete                                                                                                                                            19.7s
+   ✔ a2bcb14c13a1 Pull complete                                                                                                                                            15.7s
+   ✔ 29c56760f879 Pull complete                                                                                                                                            19.4s
+   ✔ a95000a218fc Pull complete                                                                                                                                            19.1s
+   ✔ a765d76e68d9 Pull complete                                                                                                                                            20.4s
+   ✔ c6945738f085 Pull complete                                                                                                                                            22.3s
+   ✔ 62787b7c58c5 Pull complete                                                                                                                                            22.0s
+   ✔ 85ee39c28fa6 Pull complete                                                                                                                                            22.0s
+   ✔ bee45abd643a Pull complete                                                                                                                                            36.5s
+   ✔ b0f20114a997 Pull complete                                                                                                                                            23.3s
+   ✔ f59b42092777 Pull complete                                                                                                                                            23.7s
+[+] Running 2/3
+ ⠋ Network docker_default  Created                                                                                                                                          4.0s
+ ✔ Container spug-db       Started                                                                                                                                          3.7s
+ ✔ Container spug          Started
+
+sudo docker exec spug init_spug admin 1e01087f
+/usr/local/lib/python3.6/site-packages/OpenSSL/_util.py:6: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+  from cryptography.hazmat.bindings.openssl.binding import Binding
+Migrations for 'account':
+  data/spug/spug_api/apps/account/migrations/0001_initial.py
+    - Create model History
+    - Create model Role
+    - Create model User
+    - Add field created_by to role
+Migrations for 'alarm':
+  data/spug/spug_api/apps/alarm/migrations/0001_initial.py
+    - Create model Alarm
+    - Create model Group
+    - Create model Contact
+Migrations for 'config':
+  data/spug/spug_api/apps/config/migrations/0001_initial.py
+    - Create model Service
+    - Create model Environment
+    - Create model ConfigHistory
+    - Create model Config
+Migrations for 'exec':
+  data/spug/spug_api/apps/exec/migrations/0001_initial.py
+    - Create model Transfer
+    - Create model ExecTemplate
+    - Create model ExecHistory
+Migrations for 'home':
+  data/spug/spug_api/apps/home/migrations/0001_initial.py
+    - Create model Navigation
+    - Create model Notice
+Migrations for 'host':
+  data/spug/spug_api/apps/host/migrations/0001_initial.py
+    - Create model Host
+    - Create model HostExtend
+    - Create model Group
+Migrations for 'monitor':
+  data/spug/spug_api/apps/monitor/migrations/0001_initial.py
+    - Create model Detection
+Migrations for 'notify':
+  data/spug/spug_api/apps/notify/migrations/0001_initial.py
+    - Create model Notify
+Migrations for 'schedule':
+  data/spug/spug_api/apps/schedule/migrations/0001_initial.py
+    - Create model History
+    - Create model Task
+Migrations for 'setting':
+  data/spug/spug_api/apps/setting/migrations/0001_initial.py
+    - Create model Setting
+    - Create model UserSetting
+Migrations for 'app':
+  data/spug/spug_api/apps/app/migrations/0001_initial.py
+    - Create model App
+    - Create model Deploy
+    - Create model DeployExtend1
+    - Create model DeployExtend2
+Migrations for 'repository':
+  data/spug/spug_api/apps/repository/migrations/0001_initial.py
+    - Create model Repository
+Migrations for 'deploy':
+  data/spug/spug_api/apps/deploy/migrations/0001_initial.py
+    - Create model DeployRequest
+Operations to perform:
+  Apply all migrations: account, alarm, app, config, deploy, exec, home, host, monitor, notify, repository, schedule, setting
+Running migrations:
+  Applying account.0001_initial... OK
+  Applying alarm.0001_initial... OK
+  Applying config.0001_initial... OK
+  Applying app.0001_initial... OK
+  Applying repository.0001_initial... OK
+  Applying deploy.0001_initial... OK
+  Applying exec.0001_initial... OK
+  Applying home.0001_initial... OK
+  Applying host.0001_initial... OK
+  Applying monitor.0001_initial... OK
+  Applying notify.0001_initial... OK
+  Applying schedule.0001_initial... OK
+  Applying setting.0001_initial... OK
+初始化/更新成功
+创建用户成功
+/usr/local/lib/python3.6/site-packages/OpenSSL/_util.py:6: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+  from cryptography.hazmat.bindings.openssl.binding import Binding
